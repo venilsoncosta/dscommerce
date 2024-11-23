@@ -11,9 +11,12 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT THE ZONE")
+    @Column(columnDefinition = "TIMESTAMP")
     private Instant moment;
+
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
 
     @ManyToOne
     @JoinColumn(name = "client_id")

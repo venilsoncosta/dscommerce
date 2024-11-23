@@ -12,7 +12,7 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT THE ZONE")
+    @Column(columnDefinition = "TIMESTAMP")
     private Instant moment;
 
     @OneToOne
